@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Trang hiển thị mã</title>
+  <title>Giải mã số bên dưới để nhập đúng 4 số:</title>
   <style>
     body {
       background-color: white;
@@ -10,13 +10,48 @@
       text-align: center;
       margin-top: 100px;
     }
-    h1 {
-      font-size: 40px;
-      color: black;
+    h1 { color: black; font-size: 28px; }
+    p { font-size: 22px; color: black; margin-bottom: 30px; }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      width: 150px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: "Times New Roman", serif;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: "Times New Roman", serif;
+    }
+    button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <h1>Fuck you</h1>
+  <h1>Giải đúng mã bên dưới để lấy mã 4 số</h1>
+  <h1>Mã:</h1>
+  <h1>01101110 01100001 01101101 01100101 00100000 01101111 01100110 00100000 01111001 01101111 01110101 01110010 00100000 01101101 01101111 01110100 01101000 01100101 01110010</h1>
+  <input type="text" id="code" maxlength="4" placeholder="Nhập 4 số">
+  <br>
+  <button onclick="checkCode()">Truy cập</button>
+  <script>
+    function checkCode() {
+      var code = document.getElementById("code").value;
+      if(code === "bon") {
+        window.location.href = "https://prinhix.github.io/onlyforchau2/"; 
+      } else {
+        alert("Sai rồi đấy cu, thử lại đê!");
+      }
+    }
+  </script>
 </body>
 </html>
